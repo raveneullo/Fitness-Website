@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>FitLife</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background-color: #111;
+      color: white;
+    }
+
+    header {
+      background-color: #000;
+      color: #fff;
+      padding: 1rem;
+      text-align: center;
+    }
+
+    nav ul {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      background-color: #111;
+    }
+
+    nav ul li {
+      margin: 0.5rem 1rem;
+    }
+
+    nav ul li a {
+      color: #ff0000;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    nav ul li a:hover {
+      text-decoration: underline;
+    }
+
+    section {
+      padding: 2rem;
+      border-bottom: 1px solid #333;
+    }
+
+    h1, h2 {
+      color: #ff0000;
+    }
+
+    ul {
+      padding-left: 1.5rem;
+    }
+
+    form {
+      display: flex;
+      flex-direction: column;
+      max-width: 300px;
+      margin: auto;
+    }
+
+    form input, form button, select {
+      padding: 0.5rem;
+      margin: 0.5rem 0;
+      border: none;
+      border-radius: 4px;
+    }
+
+    form input, select {
+      background-color: #222;
+      color: white;
+    }
+
+    form button {
+      background-color: #ff0000;
+      color: white;
+      cursor: pointer;
+    }
+
+    form button:hover {
+      background-color: #cc0000;
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      text-align: center;
+    }
+
+    table, th, td {
+      border: 1px solid #333;
+    }
+
+    th, td {
+      padding: 1rem;
+    }
+
+    footer {
+      text-align: center;
+      padding: 1rem;
+      background-color: #000;
+      color: white;
+    }
+  </style>
+  <script>
+    function updateMealPlan() {
+      const mealType = document.getElementById('mealType').value;
+      const mealOutput = document.getElementById('mealOutput');
+
+      const meals = {
+        gain: "High-protein meals with complex carbs and healthy fats.",
+        loss: "Low-calorie meals with lean proteins and vegetables.",
+        healthy: "Balanced meals with fruits, vegetables, whole grains, and lean proteins."
+      };
+
+      mealOutput.innerText = meals[mealType];
+    }
+  </script>
+</head>
+<body>
+  <header>
+    <h1>FitLife</h1>
+    <nav>
+      <ul>
+        <li><a href="#home">Home</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#tips">Fitness Tips</a></li>
+        <li><a href="#facts">Fun Facts</a></li>
+        <li><a href="#videos">Videos</a></li>
+        <li><a href="#calendar">Calendar</a></li>
+        <li><a href="#meals">Meal Plans</a></li>
+        <li><a href="#register">Register</a></li>
+        <li><a href="#login">Login</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <section id="home">
+    <h2>Welcome to FitLife</h2>
+    <p>Your journey to a healthier life starts here.</p>
+  </section>
+
+  <section id="about">
+    <h2>About Us</h2>
+    <p>FitLife is a fitness-focused platform dedicated to helping people stay in shape and live healthier lives through personalized workout plans, meal guidance, and motivational resources.</p>
+  </section>
+
+  <section id="tips">
+    <h2>Fitness Tips</h2>
+    <ul>
+      <li>Stay hydrated</li>
+      <li>Warm up before workouts</li>
+      <li>Maintain a balanced diet</li>
+      <li>Get enough sleep</li>
+    </ul>
+  </section>
+
+  <section id="facts">
+    <h2>Fun Fitness Facts</h2>
+    <ul>
+      <li>Exercise boosts brain power</li>
+      <li>Walking burns fat and boosts energy</li>
+      <li>Strength training increases metabolism</li>
+    </ul>
+  </section>
+
+  <section id="videos">
+    <h2>Fitness Videos</h2>
+    <ul>
+      <li><a href="https://www.youtube.com/watch?v=UoC_O3HzsH0" target="_blank">Full Body Workout</a></li>
+      <li><a href="https://www.youtube.com/watch?v=ml6cT4AZdqI" target="_blank">HIIT Routine</a></li>
+      <li><a href="https://www.youtube.com/watch?v=2pLT-olgUJs" target="_blank">Yoga for Flexibility</a></li>
+    </ul>
+  </section>
+
+  <section id="calendar">
+    <h2>Fitness Calendar</h2>
+    <table>
+      <thead>
+        <tr>
+          <th>Day</th>
+          <th>Workout</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr><td>Monday</td><td>Upper Body Strength</td></tr>
+        <tr><td>Tuesday</td><td>Cardio + Core</td></tr>
+        <tr><td>Wednesday</td><td>Yoga / Recovery</td></tr>
+        <tr><td>Thursday</td><td>Lower Body Strength</td></tr>
+        <tr><td>Friday</td><td>HIIT</td></tr>
+        <tr><td>Saturday</td><td>Full Body Workout</td></tr>
+        <tr><td>Sunday</td><td>Rest</td></tr>
+      </tbody>
+    </table>
+  </section>
+
+  <section id="meals">
+    <h2>Meal Plans</h2>
+    <label for="mealType">Choose your goal:</label>
+    <select id="mealType" onchange="updateMealPlan()">
+      <option value="gain">Muscle Gain</option>
+      <option value="loss">Weight Loss</option>
+      <option value="healthy">Healthy Living</option>
+    </select>
+    <p id="mealOutput">High-protein meals with complex carbs and healthy fats.</p>
+  </section>
+
+  <section id="register">
+    <h2>Register</h2>
+    <form>
+      <input type="text" placeholder="Username" required />
+      <input type="email" placeholder="Email" required />
+      <input type="password" placeholder="Password" required />
+      <button type="submit">Register</button>
+    </form>
+  </section>
+
+  <section id="login">
+    <h2>Login</h2>
+    <form>
+      <input type="email" placeholder="Email" required />
+      <input type="password" placeholder="Password" required />
+      <button type="submit">Login</button>
+    </form>
+  </section>
+
+  <footer>
+    <p>&copy; 2025 FitLife. All rights reserved.</p>
+  </footer>
+</body>
+</html>
