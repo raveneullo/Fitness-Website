@@ -8,13 +8,13 @@
     body {
       margin: 0;
       font-family: Arial, sans-serif;
-      background-color: #111;
-      color: white;
+      background-color: #fff;
+      color: #000;
     }
 
     header {
-      background-color: #000;
-      color: #fff;
+      background-color: #f8f8f8;
+      color: #d00;
       padding: 1rem;
       text-align: center;
     }
@@ -26,7 +26,7 @@
       display: flex;
       justify-content: center;
       flex-wrap: wrap;
-      background-color: #111;
+      background-color: #fff;
     }
 
     nav ul li {
@@ -34,7 +34,7 @@
     }
 
     nav ul li a {
-      color: #ff0000;
+      color: #d00;
       text-decoration: none;
       font-weight: bold;
     }
@@ -45,11 +45,11 @@
 
     section {
       padding: 2rem;
-      border-bottom: 1px solid #333;
+      border-bottom: 1px solid #ccc;
     }
 
     h1, h2 {
-      color: #ff0000;
+      color: #d00;
     }
 
     ul {
@@ -66,23 +66,23 @@
     form input, form button, select {
       padding: 0.5rem;
       margin: 0.5rem 0;
-      border: none;
+      border: 1px solid #ccc;
       border-radius: 4px;
     }
 
     form input, select {
-      background-color: #222;
-      color: white;
+      background-color: #fff;
+      color: #000;
     }
 
     form button {
-      background-color: #ff0000;
+      background-color: #d00;
       color: white;
       cursor: pointer;
     }
 
     form button:hover {
-      background-color: #cc0000;
+      background-color: #a00;
     }
 
     table {
@@ -92,7 +92,7 @@
     }
 
     table, th, td {
-      border: 1px solid #333;
+      border: 1px solid #ccc;
     }
 
     th, td {
@@ -102,8 +102,14 @@
     footer {
       text-align: center;
       padding: 1rem;
-      background-color: #000;
-      color: white;
+      background-color: #f8f8f8;
+      color: #000;
+    }
+
+    img {
+      max-width: 100%;
+      height: auto;
+      margin: 1rem 0;
     }
   </style>
   <script>
@@ -133,8 +139,6 @@
         <li><a href="#videos">Videos</a></li>
         <li><a href="#calendar">Calendar</a></li>
         <li><a href="#meals">Meal Plans</a></li>
-        <li><a href="#register">Register</a></li>
-        <li><a href="#login">Login</a></li>
       </ul>
     </nav>
   </header>
@@ -142,11 +146,13 @@
   <section id="home">
     <h2>Welcome to FitLife</h2>
     <p>Your journey to a healthier life starts here.</p>
+    <img src="https://via.placeholder.com/800x300?text=Welcome+to+FitLife" alt="Welcome Image">
   </section>
 
   <section id="about">
     <h2>About Us</h2>
     <p>FitLife is a fitness-focused platform dedicated to helping people stay in shape and live healthier lives through personalized workout plans, meal guidance, and motivational resources.</p>
+    <img src="https://via.placeholder.com/800x300?text=About+FitLife" alt="About Us Image">
   </section>
 
   <section id="tips">
@@ -157,6 +163,7 @@
       <li>Maintain a balanced diet</li>
       <li>Get enough sleep</li>
     </ul>
+    <img src="https://via.placeholder.com/800x300?text=Fitness+Tips" alt="Fitness Tips Image">
   </section>
 
   <section id="facts">
@@ -166,6 +173,7 @@
       <li>Walking burns fat and boosts energy</li>
       <li>Strength training increases metabolism</li>
     </ul>
+    <img src="https://via.placeholder.com/800x300?text=Fun+Facts" alt="Fun Facts Image">
   </section>
 
   <section id="videos">
@@ -175,6 +183,7 @@
       <li><a href="https://www.youtube.com/watch?v=ml6cT4AZdqI" target="_blank">HIIT Routine</a></li>
       <li><a href="https://www.youtube.com/watch?v=2pLT-olgUJs" target="_blank">Yoga for Flexibility</a></li>
     </ul>
+    <img src="https://via.placeholder.com/800x300?text=Workout+Videos" alt="Workout Videos">
   </section>
 
   <section id="calendar">
@@ -207,25 +216,7 @@
       <option value="healthy">Healthy Living</option>
     </select>
     <p id="mealOutput">High-protein meals with complex carbs and healthy fats.</p>
-  </section>
-
-  <section id="register">
-    <h2>Register</h2>
-    <form>
-      <input type="text" placeholder="Username" required />
-      <input type="email" placeholder="Email" required />
-      <input type="password" placeholder="Password" required />
-      <button type="submit">Register</button>
-    </form>
-  </section>
-
-  <section id="login">
-    <h2>Login</h2>
-    <form>
-      <input type="email" placeholder="Email" required />
-      <input type="password" placeholder="Password" required />
-      <button type="submit">Login</button>
-    </form>
+    <img src="https://via.placeholder.com/800x300?text=Meal+Plans" alt="Meal Plans">
   </section>
 
   <footer>
