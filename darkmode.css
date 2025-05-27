@@ -1,0 +1,31 @@
+body {
+  background-color: #121212;
+  color: #f0f0f0;
+}
+
+header, footer, nav ul {
+  background-color: #1e1e1e;
+  color: #f0f0f0;
+}
+
+nav ul li a {
+  color: #f88;
+}
+
+form input, form button, select {
+  background-color: #2a2a2a;
+  color: #f0f0f0;
+  border: 1px solid #555;
+}
+
+form button {
+  background-color: #f44;
+}
+
+form button:hover {
+  background-color: #c22;
+}
+
+table, th, td {
+  border: 1px solid #444;
+}
