@@ -4,22 +4,139 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>FitLife</title>
-  <link id="themeStylesheet" rel="stylesheet" href="light.css">
   <style>
-    button.theme-toggle {
-      position: fixed;
-      top: 1rem;
-      right: 1rem;
-      padding: 0.5rem 1rem;
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background-color: #fff;
+      color: #000;
+      text-align: center;
+    }
+
+    header {
+      background-color: #f8f8f8;
+      color: #d00;
+      padding: 1rem;
+    }
+
+    nav ul {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      background-color: #fff;
+    }
+
+    nav ul li {
+      margin: 0.5rem 1rem;
+    }
+
+    nav ul li a {
+      color: #d00;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    nav ul li a:hover {
+      text-decoration: underline;
+    }
+
+    section {
+      padding: 2rem;
+      border-bottom: 1px solid #ccc;
+    }
+
+    h1, h2 {
+      color: #d00;
+      text-align: center;
+    }
+
+    ul {
+      padding-left: 1.5rem;
+      display: inline-block;
+      text-align: left;
+    }
+
+    form {
+      display: flex;
+      flex-direction: column;
+      max-width: 300px;
+      margin: auto;
+    }
+
+    form input, form button, select {
+      padding: 0.5rem;
+      margin: 0.5rem 0;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+    }
+
+    form input, select {
+      background-color: #fff;
+      color: #000;
+    }
+
+    form button {
       background-color: #d00;
       color: white;
-      border: none;
-      border-radius: 4px;
       cursor: pointer;
-      z-index: 1000;
     }
-    button.theme-toggle:hover {
+
+    form button:hover {
       background-color: #a00;
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      text-align: center;
+    }
+
+    table, th, td {
+      border: 1px solid #ccc;
+    }
+
+    th, td {
+      padding: 1rem;
+    }
+
+    footer {
+      text-align: center;
+      padding: 1rem;
+      background-color: #f8f8f8;
+      color: #000;
+    }
+
+    .responsive-img {
+      display: block;
+      max-width: 600px;
+      width: 90%;
+      height: auto;
+      margin: 1rem auto;
+      border-radius: 8px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    }
+
+    .video-section ul {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      padding: 0;
+      list-style: none;
+      gap: 2rem;
+    }
+
+    .video-card {
+      max-width: 300px;
+      text-align: center;
+    }
+
+    .video-card img {
+      width: 100%;
+      height: auto;
+      border-radius: 8px;
     }
   </style>
   <script>
@@ -35,25 +152,9 @@
 
       mealOutput.innerText = meals[mealType];
     }
-
-    function toggleTheme() {
-      const link = document.getElementById('themeStylesheet');
-      const currentTheme = link.getAttribute('href');
-      const newTheme = currentTheme === 'light.css' ? 'darkmode.css' : 'light.css';
-      link.setAttribute('href', newTheme);
-      localStorage.setItem('theme', newTheme);
-    }
-
-    window.addEventListener('DOMContentLoaded', () => {
-      const savedTheme = localStorage.getItem('theme');
-      if (savedTheme) {
-        document.getElementById('themeStylesheet').setAttribute('href', savedTheme);
-      }
-    });
   </script>
 </head>
 <body>
-  <button class="theme-toggle" onclick="toggleTheme()">Toggle Dark Mode</button>
   <header>
     <h1>FitLife</h1>
     <nav>
@@ -72,13 +173,13 @@
   <section id="home">
     <h2>Welcome to FitLife</h2>
     <p>Your journey to a healthier life starts here.</p>
-    <img src="Home.jpg" alt="Welcome Image">
+    <img src="Home.jpg" alt="Welcome Image" class="responsive-img">
   </section>
 
   <section id="about">
     <h2>About Us</h2>
     <p>FitLife is a fitness-focused platform dedicated to helping people stay in shape and live healthier lives through personalized workout plans, meal guidance, and motivational resources.</p>
-    <img src="About.jpg" alt="About Us Image">
+    <img src="About.jpg" alt="About Us Image" class="responsive-img">
   </section>
 
   <section id="tips">
@@ -89,7 +190,7 @@
       <li>Maintain a balanced diet</li>
       <li>Get enough sleep</li>
     </ul>
-    <img src="Tips.jpg" alt="Fitness Tips Image">
+    <img src="Tips.jpg" alt="Fitness Tips Image" class="responsive-img">
   </section>
 
   <section id="facts">
@@ -99,23 +200,23 @@
       <li>Walking burns fat and boosts energy</li>
       <li>Strength training increases metabolism</li>
     </ul>
-    <img src="Facts.jpg" alt="Fun Facts Image">
+    <img src="Facts.jpg" alt="Fun Facts Image" class="responsive-img">
   </section>
 
-  <section id="videos">
+  <section id="videos" class="video-section">
     <h2>Fitness Videos</h2>
-    <ul style="list-style: none; padding: 0;">
-      <li>
+    <ul>
+      <li class="video-card">
         <a href="https://www.youtube.com/watch?v=UoC_O3HzsH0" target="_blank">Full Body Workout</a>
-        <img src="vid1.jpg" alt="Full Body Workout">
+        <img src="vid1.jpg" alt="Full Body Workout Thumbnail">
       </li>
-      <li>
+      <li class="video-card">
         <a href="https://www.youtube.com/watch?v=ml6cT4AZdqI" target="_blank">HIIT Routine</a>
-        <img src="vid2.jpg" alt="HIIT Routine">
+        <img src="vid2.jpg" alt="HIIT Routine Thumbnail">
       </li>
-      <li>
+      <li class="video-card">
         <a href="https://www.youtube.com/watch?v=2pLT-olgUJs" target="_blank">Yoga for Flexibility</a>
-        <img src="vid3.jpg" alt="Yoga for Flexibility">
+        <img src="vid3.jpg" alt="Yoga for Flexibility Thumbnail">
       </li>
     </ul>
   </section>
@@ -150,7 +251,7 @@
       <option value="healthy">Healthy Living</option>
     </select>
     <p id="mealOutput">High-protein meals with complex carbs and healthy fats.</p>
-    <img src="Meal.jpg" alt="Meal Plans">
+    <img src="Meal.jpg" alt="Meal Plans" class="responsive-img">
   </section>
 
   <footer>
