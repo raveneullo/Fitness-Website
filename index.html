@@ -17,6 +17,24 @@
       background-color: #f8f8f8;
       color: #d00;
       padding: 1rem;
+      position: relative;
+    }
+
+    .darkmode-button {
+      position: absolute;
+      top: 1rem;
+      right: 1rem;
+      background-color: #d00;
+      color: #fff;
+      border: none;
+      padding: 0.5rem 1rem;
+      border-radius: 4px;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    .darkmode-button:hover {
+      background-color: #a00;
     }
 
     nav ul {
@@ -157,6 +175,7 @@
 <body>
   <header>
     <h1>FitLife</h1>
+    <a href="Dark.html" class="darkmode-button">DarkMode</a>
     <nav>
       <ul>
         <li><a href="#home">Home</a></li>
